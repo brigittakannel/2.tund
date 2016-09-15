@@ -32,6 +32,16 @@
 			//oli tühi 
 			$signupPasswordError = "you have to choose a password";
 			
+	} else {
+		
+		//ei olnud midagi
+		
+		//kas pikkus oli vähemalt 8 
+		
+		if (strlen ($_POST["signupPassword"]) < 8 ) {
+			
+			$signupPasswordError = "password must be at least 8 characters long";
+			}
 		}
 		
 	}
