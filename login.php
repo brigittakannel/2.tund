@@ -16,10 +16,25 @@
 			//oli tühi 
 			$signupEmailError = "you have to enter your email";
 			
+	
+	
 		}
 	}
 
-
+	$signupPasswordError = "";
+	
+	if(isset($_POST["signupPassword"])) {
+		
+		//oli olemas, ehk keegi vajutas nuppu
+		//kas oli tühi
+		if (empty ($_POST["signupPassword"])) {
+			
+			//oli tühi 
+			$signupPasswordError = "you have to choose a password";
+			
+		}
+		
+	}
 
 
 
@@ -59,7 +74,7 @@
 			
 			<br><br>
 			
-			<input placeholder="password" name="signupPassword" type="password">
+			<input placeholder="password" name="signupPassword" type="password"> <?php echo $signupPasswordError; ?>
 			
 			<br><br>
 			
